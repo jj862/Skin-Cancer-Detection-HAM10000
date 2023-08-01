@@ -26,6 +26,11 @@ The data originates from two distinct locations. One being the HAM10000 dataset 
 The HAM10000 dataset from Harvard Dataverse, aims to address the challenges in training neural networks for automated diagnosis of pigmented skin lesions. The dataset contains 10015 dermatoscopic images from diverse populations, acquired and stored using different modalities. It serves as a valuable training set for academic machine learning purposes. The dataset covers various diagnostic categories of pigmented lesions, including actinic keratoses, basal cell carcinoma, benign keratosis-like lesions, dermatofibroma, melanoma, melanocytic nevi, and vascular lesions.More than 50% of the lesions in the dataset have been confirmed through histopathology, while the ground truth for the remaining cases is determined through follow-up examination, expert consensus, or confirmation by in-vivo confocal microscopy. Additionally, the dataset includes lesions with multiple images, allowing them to be tracked by the lesion_id-column within the HAM10000_metadata file.
 
 The other source is [Kaggle, Dermatology MNIST](https://www.kaggle.com/code/kmader/dermatology-mnist-loading-and-processing). The data taken from kaggle is linked in the dermatology-mnist-loading-and-processing.ipynb file which proceses the images into pixel arrays(data) used in the main model notebook. The code flattening the images into vectors and exports them. I ran this notebook as is and did not edit any of this notebook. 
+## Skin image examples
+<img width="740" alt="Screenshot 2023-08-01 at 12 59 51 AM" src="https://github.com/jj862/Skin-detection-CNN/assets/69119958/083c0238-6f47-4adc-bc9e-36fdc04abdbd">
+<img width="742" alt="Screenshot 2023-08-01 at 1 00 12 AM" src="https://github.com/jj862/Skin-detection-CNN/assets/69119958/6244b001-9056-4cfe-86ab-c268dd400125">
+
+
 
 ## Resutls:
 My CNN built model preformed better than the tranfer learning models. For example the CNN accuracy reached 76% with a auc score of 96%. The MobilenetV2 model which was going to be used in deployment only reached an accuracy of 71% and a auc score of 94%. This could be due to poor engineering of the MobilenetV2 on my part and in futur work i will imporve on this model. 
