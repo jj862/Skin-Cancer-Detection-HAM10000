@@ -1,31 +1,35 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %}
+{% block content %}
 
-<h2>Image Classifier</h2>
+<h1>Benign or Malignant</h1>
+<p class="comment">Find out if the skin lesion is normal or not. Upload image or specify URL.</p>
+<dive class="col-xs-6">
+    <form action="/upload" id="upload-file" method="post" enctype="multipart/form-data">
+        <p class="comment">Select image to upload and press Detect:</p>
+        <div class="custom-file">
+            <input type="file" class="custom-file-input" name="file" id="customFile">
+            <label class="custom-file-label" for="customFile">Choose file</label>
 
-<div>
-    <form id="upload-file" method="post" enctype="multipart/form-data">
-        <label for="imageUpload" class="upload-label">
-            Choose...
-        </label>
-        <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+        </div>
+
+        <div>
+            <input type="submit" class="btn btn-success" id="btn-predict" value="Detect" />
+        </div>
     </form>
 
-    <div class="image-section" style="display:none;">
-        <div class="img-preview">
-            <div id="imagePreview">
-            </div>
+    <h5 class="comment">OR</h5>
+    <p class="comment">Enter image URL and press Detect:</p>
+    <form action="/classify-url" id="submit-url" method="post">
+        <div class="col-xs-4">
+            <input type="url" class="form-control" name="url" id="url-input" placeholder="Enter image URL">
         </div>
         <div>
-            <button type="button" class="btn btn-primary btn-lg " id="btn-predict">Predict!</button>
+            <input type="submit" class="btn btn-success" value="Detect">
         </div>
-    </div>
-
-    <div class="loader" style="display:none;"></div>
-
+    </form>
     <h3 id="result">
         <span> </span>
     </h3>
 
-</div>
-
+</dive>
 {% endblock %}
