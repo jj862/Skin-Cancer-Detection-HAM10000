@@ -19,7 +19,7 @@ from PIL import Image as PILImage
 # Define a flask app
 app = Flask(__name__)
 
-NAME_OF_FILE = '/skin2/Notebooks/best_model.h5' # Name of your exported file
+NAME_OF_FILE = 'best_model.h5' # Name of your exported file
 PATH_TO_MODELS_DIR = Path('') # by default just use /models in root dir
 classes = ['Actinic keratoses', 'Basal cell carcinoma', 'Benign keratosis',
            'Dermatofibroma', 'Melanocytic nevi', 'Melanoma', 'Vascular lesions']
