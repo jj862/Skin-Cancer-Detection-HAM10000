@@ -1,0 +1,16 @@
+Flask
+gunicorn
+
+fastai==1.0.52
+
+
+tensorflow
+keras
+numpy
+pandas
+seaborn
+scikit-learn
+imbalanced-learn
+matplotlib
+scikit-image
+Pillow
