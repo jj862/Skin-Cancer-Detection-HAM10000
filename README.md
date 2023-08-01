@@ -55,8 +55,8 @@ While there are over 10000 images to train, there is a huge imbalance in the dat
 Another issue was the amount of classes used in the model. The data was tested on 7 different classes, and for future work I will address each of these classes seperatly rather than all at once to improve accuracy.
 
 ## Contact
-jonah.devoy@yahoo.com
-www.linkedin.com/in/jonahdevoy
+* jonah.devoy@yahoo.com
+* [Linkedin](www.linkedin.com/in/jonahdevoy)
 
 ## Glossary:
 - Precision - Indicates the proportion of positive identifications (model predicted class `1`) which were actually correct. A model which produces no false positives has a precision of 1.0.
