@@ -1,8 +1,0 @@
-gunicorn
-flask
-numpy
--f https://download.pytorch.org/whl/torch_stable.html
-torch==1.13.1
-torchvision==0.1.9
-fastai==1.0.52
-jupyter
