@@ -5,6 +5,7 @@ import os
 import glob
 import re
 import numpy as np
+import pickle
 
 # Keras
 from keras.applications.imagenet_utils import preprocess_input, decode_predictions
@@ -20,7 +21,7 @@ from gevent.pywsgi import WSGIServer
 app = Flask(__name__)
 
 # Model saved with Keras model.save()
-MODEL_PATH = 'models/model_resnet.h5'
+MODEL_PATH = '/Users/jdapeman/Documents/skin2/CNN0.h5'
 
 # Load your trained model
 model = load_model(MODEL_PATH)
@@ -36,7 +37,7 @@ print('Model loaded. Check http://127.0.0.1:5000/')
 
 
 def model_predict(img_path, model):
-    img = image.load_img(img_path, target_size=(224, 224))
+    img = image.load_img(img_path, target_size=(28, 28))
 
     # Preprocessing the image
     x = image.img_to_array(img)
